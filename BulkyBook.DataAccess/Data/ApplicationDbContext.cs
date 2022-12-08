@@ -29,5 +29,16 @@ namespace BulkyBook.DataAccess
         {
             get; set;
         }
+
+        public DbSet<ApplicationUser> ApplicationUsers
+        {
+            get;
+            set;
+        }
+        public DbSet<Company> Companies
+        {
+            get;
+            set;
+        }
     }
 }

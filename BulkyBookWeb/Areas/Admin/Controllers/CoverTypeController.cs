@@ -39,7 +39,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             {
                 _unitOfWork.CoverType.Add(obj);
                 _unitOfWork.Save();
-                TempData["success"] = "Cover Type created successfully";
+                //TempData["success"] = "Cover Type created successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -51,7 +51,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         {
             if (id == null || id == 0)
             {
-                TempData["error"] = "Cover Type not found";
+                //TempData["error"] = "Cover Type not found";
                 return NotFound();
             }
             /*var categoryFromDb = _db.Categories.Find(id);*/
@@ -70,7 +70,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             {
                 _unitOfWork.CoverType.Update(obj);
                 _unitOfWork.Save();
-                TempData["success"] = "Cover Type  updated successfully";
+                //TempData["success"] = "Cover Type  updated successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -86,7 +86,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
 
             if (categoryFromDbFirst == null)
             {
-                TempData["error"] = "Cover Type not found";
+                //TempData["error"] = "Cover Type not found";
                 return NotFound();
             }
 
@@ -107,7 +107,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
 
             _unitOfWork.CoverType.Remove(obj);
             _unitOfWork.Save();
-            TempData["success"] = "Cover Type deleted successfully";
+            //TempData["success"] = "Cover Type deleted successfully";
             return RedirectToAction("Index");
         }
     }

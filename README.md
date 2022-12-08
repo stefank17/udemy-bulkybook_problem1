@@ -12,4 +12,4 @@ open command prompt in that location
 dotnet run
 visite the given localhost site with given port
 
-
+Once you get the site running click register or login button, it will crash

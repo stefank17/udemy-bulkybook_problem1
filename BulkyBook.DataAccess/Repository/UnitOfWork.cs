@@ -33,6 +33,10 @@ namespace BulkyBook.DataAccess.Repository
         {
             get; private set;
         }
+        public ICompanyRepository Company
+        {
+            get; private set;
+        }
 
         public void Save()
         {

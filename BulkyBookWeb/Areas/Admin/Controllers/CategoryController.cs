@@ -43,7 +43,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             {
                 _unitOfWork.Category.Add(obj);
                 _unitOfWork.Save();
-                TempData["success"] = "Category created successfully";
+                //TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -55,7 +55,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         {
             if (id == null || id == 0)
             {
-                TempData["error"] = "Category not found";
+                //TempData["error"] = "Category not found";
                 return NotFound();
             }
             /*var categoryFromDb = _db.Categories.Find(id);*/
@@ -78,7 +78,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             {
                 _unitOfWork.Category.Update(obj);
                 _unitOfWork.Save();
-                TempData["success"] = "Category updated successfully";
+                //TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -94,7 +94,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
 
             if (categoryFromDbFirst == null)
             {
-                TempData["error"] = "Category not found";
+                //TempData["error"] = "Category not found";
                 return NotFound();
             }
 
@@ -115,7 +115,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
 
             _unitOfWork.Category.Remove(obj);
             _unitOfWork.Save();
-            TempData["success"] = "Category deleted successfully";
+            //TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }
     }
